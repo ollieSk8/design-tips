@@ -30,23 +30,21 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 	2. [裁剪](#hash_text-overflow-clip)
 	3. [提示](#hash_text-overflow-tip)
 	4. [换行](#hash_text_newline)
-4. [PSD](#hash_psd)
-	1. [图层命名](#hash_psd-layer-name)
-	2. [标注](#hash_psd-marker)
-	3. [字体](#hash_psd-font)
-5. 栅格化
-6. [状态](#hash_status)
+4. [导出设计稿](#hash_psd)
+	1. [标注](#hash_psd-marker)
+	2. [字体](#hash_psd-font)
+5. [状态](#hash_status)
 	1. [Loading](#hash_status-loading)
 	2. [hover](#hash_status-hover)
 	3. [error](#hash_status-error)
 	4. [分页](#hash_status-paging)
 	5. [用户超时登出](#hash_status-logout)
-7. [UI组件化](#hash_ui)
+6. [UI组件化](#hash_ui)
 	1. [图表](#hash_ui-charts)
-8. [typo 内容排版样式](#hash_typo)
+7. [typo 内容排版样式](#hash_typo)
 	1. [富文本编辑](#hash_typo-rich-text-editor)
 	2. [markdown](#hash_typo-markdown))
-9. [技术团队审核设计稿](#hash_everyone_checkout)
+8. [技术团队审核设计稿](#hash_everyone_checkout)
 
 ---
 
@@ -63,9 +61,9 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 <a name="hash_size_min-width" href="#hash_top">Top</a>
 
-### 最小宽度
+### PC页面最小宽度
 
-pc端页面尺寸最小宽度980px
+pc端页面尺寸最小宽度约定为980px
 
 ![width-980](./media/width-980.png)
 
@@ -132,12 +130,19 @@ W=(a*n)+(n-1)*i
 
 <a name="hash_font-size" href="#hash_top">Top</a>
 
-### 大小
+### pc字体大小
+
+> **通常使用12、14、16、24号字体来完成排版，正常情况下不允许出现奇数号字体，请设计童鞋注意！！！**
+
 
 关于网页字体大小等问题，也可以参考上面比较经典的设计规范约定。常见的内容段落文字大小约定为 14px。
 我这边在做的规范，关于排版的约定如下：
 
 内容性质字体大小不得小于 12px ，因为某些浏览器默认文字大小只能是 12px。网页中显示小于 12px 的文字会变形。
+
+### 移动端字体大小
+
+移动端2倍设计图字体最小是24px，字号大小是4的倍数
 
 ![panban.jpg](./media/panban.jpg)
 
@@ -199,107 +204,37 @@ W=(a*n)+(n-1)*i
 <a name="hash_text_newline" href="#hash_top">Top</a>
 
 
-## PSD
+## 导出设计稿
 
-<a name="hash_psd-layer-name" href="#hash_top">Top</a>
-### 图层命名
-> 这一项不是必须的，但是想**成为优秀设计师**必须做到这一点
+推荐设计使用 [https://app.zeplin.io](https://app.zeplin.io)或者[https://www.sketch.com/](https://www.sketch.com/)导出设计图稿给到前端。
 
-<table>
-  <thead>
-  <tr>
-     <th>
-		结构清晰的命名
-     </th>
-     <th>
-		糟糕的命名
-     </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-     <td>
-		<img src="./media/psd-layer-name-good.jpg" />
-     </td>
-     <td>
-		<img src="./media/psd-layer-name-bad.jpg" />
-     </td>
-  </tr>
-  </tbody>
-</table>
+### 导出尺寸和设计建议
 
-> 用中文命名也可以
+pc端按照实际设计的尺寸导出，移动端页面宽度按照750导出。
 
-合理的命名会在设计复杂页面时能快速找到相关图层，Web前端同事在 PSD 中找到相关资源也更方便。
+相似内容尽可能保证样式统一性
 
 <a name="hash_psd-retina" href="#hash_top">Top</a>
+
 ### 标注
 
 [![](./media/mark.png)](https://www.zhihu.com/question/27743708)
 
-非常棒的设计稿会将具体尺寸都标注出来，包括元素的一些状态。[标注工具 Dorado](http://cdc.tencent.com/?p=3268)
-并不是前端没有这个时间标注尺寸和颜色，而是当设计师对自己的设计稿进行标注后会有一个『检查』的过程。
+将设计稿具体尺寸都标注出来，包括元素的一些状态。
 
-例如：
-![](./media/mark2.png)
-此处的标注是前端拿到设计稿后标注的。这里就会有个选择，箭头距边框距离是左41右43还是左右都42。
-
-我估计设计的实际想法是左右都是42，因为要对称。但由于设计的时候出现几像素的偏差，导致前端测量时尺寸不对。
-
-以上只是为了说明情况举的一个例子，实际开发过程中可能会遇到比这个例子更麻烦的问题。
-
-**如果设计同事对设计稿进行了标注工作，可以『检查』自己的设计稿**
-
-**资源**
-1. [微型设计专用工具Dorado](http://cdc.tencent.com/?p=3268)
-
-<a name="hash_psd-font" href="#hash_top">Top</a>
-### 字体
-
-> 不是必须的
-
-若设计稿使用了特殊字体，建议提供设计稿时提供相应的字体文件。
-![](./media/font-chinese.png)
-
-## 栅格化
-
-<a name="hash_status" href="#hash_top" ></a>
-
-## 状态
-
-> 状态这一部分应该是给新手产品经理看的，但没有产品经理时设计应该注意状态的设计。
+## 网页状态完整性
 
 网页并不是一张禁止的图片，它的内容会变化，这种变化对应不同的状态。设计时需要考虑到这些状态，成熟的团队产品原型中会说明对应的状态，没有原型的情况下，设计需要考虑好状态。
 
 <a name="hash_status-loading" href="#hash_top" ></a>
 
 ### loading
+
 有些内容并不是页面打开就加在完成的，而是有一个 loading 的过程。
 
-<table>
-  <thead>
-  <tr>
-     <th>
-		鼠标划入开始加载
-     </th>
-     <th>
-		加载完成
-     </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-     <td>
-		<img src="./media/status-loading.png" />
-     </td>
-     <td>
-		<img src="./media/status-loadover.png" />
-     </td>
-  </tr>
-  </tbody>
-</table>
+![./media/listloading](./media/listloading)
 
-需要 loading 是因为如果页面打开就提供所有的数据，页面的打开速度会很慢。而且这些数据不是必要数据，当用户鼠标划入的时候才需要显示，这样就可以当鼠标划入时浏览器向服务器请求数据后显示，请求的过程需要出现 loading 提示用户。
+例如上面这个列表，在初始化加载页面是没有数据的，加载过程中应该出现loading文字提示。
 
 <a name="hash_status-hover" href="#hash_top" ></a>
 
@@ -312,7 +247,7 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 3. 激活状态（非必须）
 4. 禁用状态（非必须）
 
-绝大部分按钮都需要设计鼠标划入状态。并在当前PSD或者设计说明PSD中展现出一个元素所有的状态
+绝大部分按钮都需要设计鼠标划入状态。并在当前设计稿或者设计说明中展现出一个元素所有的状态
 
 <a name="hash_status-error" href="#hash_top" ></a>
 
@@ -325,41 +260,17 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 
 **数据为空也是一种状态，也需要在设计时就考虑到**
 
+![](./media/nodata.png)
 
 <a name="hash_status-paging" href="#hash_top" ></a>
 
-### 分页
-
-设计页面时需要考虑内容是否存在多页情况，若存在多页则需设计出分页样式。常见于列表。
-![](https://cloud.githubusercontent.com/assets/3949015/7386863/150a781c-ee8b-11e4-91a3-ec686b565e50.gif)
-
-
-<a name="hash_status-logout" href="#hash_top" ></a>
-
-### 用户超时登出
-
-> 只有在页面停留时间长且单页操作交互频繁的业务场景下才需要考虑这一点，例如在线协同办公系统 [teambition](https://www.teambition.com/)
-
-用户打开A页面和B页面，在A中用户点击`退出登录`，用户状态变为`未登录`。或后端 [session](http://baike.baidu.com/link?url=r6TK_IE6WOaxtxG1FvtUp1Uvm7GT26sBmXdCaRDCzBdXWDX29aF2CqYN2gXN7rNtTvT55ck4nUfda2m7stN98q) 过期导致当前设备变为`未登录`状态时，用户继续操作需要登录的页面功能时会应该出现提示：
-![](./media/logout.png)
-或者提示当前用户未登录，请重新登录。
-
-<a name="hash_ui" href="#hash_top" ></a>
-
 ## UI组件化
 
-设计一套符合当前项目的UI风格并在界面中复用，能提高界面的统一性和提高开发效率。国内做的好并开源的一些产品
+建议设计使用套符合当前项目的UI风格并在当前界面中复用，能提高界面的统一性和提高开发效率。国内做的好并开源的一些产品
 
-1. [蚂蚁金服 Ant](http://ant.design/) **强烈推荐**
-2. [百度产品线 GMU](http://gmu.baidu.com/)
-3. [百姓网 CMUI](http://cmui.net/)
-4. 此处省略
-
----
-
-> Ant Design 是一个 UI 设计语言，是一套提炼和应用于企业级后台产品的交互语言和视觉体系。
->
-以 [Ant Design](http://ant.design/spec/font) 为例，这是一套蚂蚁金服团队基于自己产品所形成的一套 UI，已完成了设计阶段和前端实现阶段。蚂蚁金服基于这套 UI可以快速搭建页面并能保障界面统一。
+1. [饿了么 ElementUI](http://element.eleme.io) **强烈推荐**
+2. [有赞 yant](https://youzan.github.io)
+3. 此处省略
 
 <a name="hash_ui-charts" href="#hash_top" ></a>
 
