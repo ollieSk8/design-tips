@@ -32,9 +32,8 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 	4. [换行](#hash_text_newline)
 4. [PSD](#hash_psd)
 	1. [图层命名](#hash_psd-layer-name)
-	2. [Retina](#hash_psd-retina)
-	3. [标注](#hash_psd-marker)
-	4. [字体](#hash_psd-font)
+	2. [标注](#hash_psd-marker)
+	3. [字体](#hash_psd-font)
 5. 栅格化
 6. [状态](#hash_status)
 	1. [Loading](#hash_status-loading)
@@ -200,6 +199,41 @@ W=(a*n)+(n-1)*i
 
 <a name="hash_text_newline" href="#hash_top">Top</a>
 
+
+## PSD
+
+<a name="hash_psd-layer-name" href="#hash_top">Top</a>
+### 图层命名
+> 这一项不是必须的，但是想**成为优秀设计师**必须做到这一点
+
+<table>
+  <thead>
+  <tr>
+     <th>
+		结构清晰的命名
+     </th>
+     <th>
+		糟糕的命名
+     </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+     <td>
+		<img src="./media/psd-layer-name-good.jpg" />
+     </td>
+     <td>
+		<img src="./media/psd-layer-name-bad.jpg" />
+     </td>
+  </tr>
+  </tbody>
+</table>
+
+> 用中文命名也可以
+
+合理的命名会在设计复杂页面时能快速找到相关图层，Web前端同事在 PSD 中找到相关资源也更方便。
+
+<a name="hash_psd-retina" href="#hash_top">Top</a>
 ### 标注
 
 [![](./media/mark.png)](https://www.zhihu.com/question/27743708)
