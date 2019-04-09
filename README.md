@@ -58,7 +58,7 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 网页尺寸需要考虑浏览者的屏幕分辨率
 
-主流的pc页面尺寸见下图，其中1366*768、1920*1080 两种尺寸占比最多
+主流的pc页面尺寸见下图，其中1366X768、1920X1080 两种尺寸占比最多
 ![1554777427684.jpg](./media/1554777427684.jpg)
 
 <a name="hash_size_min-width" href="#hash_top">Top</a>
@@ -108,6 +108,8 @@ W=(a*n)+(n-1)*i
 我们定义W为1080px,A为50px,i为20px,所以n=24
 
 当我们设置设计栅格时候，可以将总宽度设为1180，页面分为24栏，每一栏宽度为30px,间距20px
+
+响应式设计规范可参考 [https://github.com/ColdXu/grid-design](https://github.com/ColdXu/grid-design)
 
 <a name="hash_retina" href="#hash_top">Top</a>
 
@@ -198,45 +200,6 @@ W=(a*n)+(n-1)*i
 
 <a name="hash_text_newline" href="#hash_top">Top</a>
 
-
-## PSD
-
-<a name="hash_psd-layer-name" href="#hash_top">Top</a>
-### 图层命名
-> 这一项不是必须的，但是想**成为优秀设计师**必须做到这一点
-
-<table>
-  <thead>
-  <tr>
-     <th>
-		结构清晰的命名
-     </th>
-     <th>
-		糟糕的命名
-     </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-     <td>
-		<img src="./media/psd-layer-name-good.jpg" />
-     </td>
-     <td>
-		<img src="./media/psd-layer-name-bad.jpg" />
-     </td>
-  </tr>
-  </tbody>
-</table>
-
-> 用中文命名也可以
-
-合理的命名会在设计复杂页面时能快速找到相关图层，Web前端同事在 PSD 中找到相关资源也更方便。
-
-<a name="hash_psd-retina" href="#hash_top">Top</a>
-### Retina
-欢迎提交 [issues](https://github.com/nimojs/web-design-notes/issues/new)或者 [New pull request](https://github.com/nimojs/web-design-notes/pulls)补充此章节
-
-<a name="hash_psd-marker" href="#hash_top">Top</a>
 ### 标注
 
 [![](./media/mark.png)](https://www.zhihu.com/question/27743708)
