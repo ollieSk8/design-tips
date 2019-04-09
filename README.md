@@ -57,12 +57,16 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 网页尺寸需要考虑浏览者的屏幕分辨率
 
-主流的pc页面尺寸见下图，其中1366X768、1920X1080 两种尺寸占比最多
-![1554777427684.jpg](./media/1554777427684.jpg)
+主流的pc页面尺寸见下图，其中1366X768、1920X1080 两种尺寸占比最多,建议设计在设计pc页面时候使用这俩种分辨率
+
+![pccontainer.png](./media/pccontainer.png)
 
 <a name="hash_size_min-width" href="#hash_top">Top</a>
 
 ### 最小宽度
+
+pc端页面尺寸最小宽度980px
+
 ![width-980](./media/width-980.png)
 
 Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现滚动条。
@@ -145,14 +149,13 @@ W=(a*n)+(n-1)*i
 
 由于程序输出的文字不建议使用中文特殊字体，因为想要在用户电脑中使用中文特殊字体需要在浏览器中加载字体文件。而中文字体文件体积至少 1MB 以上
 
-推荐一个中文特殊字体生成平台，可以在不使用图片的情况下使用固定的少量文字。[WebFont](http://iconfont.cn/webfont/#!/webfont/index) |  [浏览器使用示例](http://nimojs.github.io/web-design-notes/webfont.html)
-
-若使用英文特殊字体，请将字体文件同 PSD 一并交付给前端。
+若使用英文特殊字体，请将字体文件同 设计稿 一并交付给前端。
 
 <a name="hash_font-icon" href="#hash_top">Top</a>
 
 ### 字体图标
 ![](./media/iconfont.png)
+
 图标是网页中非常常见的元素，以前Web前端在实现时是通过图片实现。有如下缺点：
 
 1. Retina 屏下因为图片分辨率太低会导致图标模糊
@@ -161,11 +164,7 @@ W=(a*n)+(n-1)*i
 
 **以上三个问题，用 iconfont 可以完美解决**
 
-请点击 [示例](http://nimojs.github.io/web-design-notes/iconfont.html) 查看使用 iconfont 显示图标的效果。
-
 [ICONFONT平台功能介绍](http://iconfont.cn/help/platform.html)
-
-> 除了 iconfont.cn 还有很多类似的平台
 
 <a name="hash_text-overflow" href="#hash_top">Top</a>
 
