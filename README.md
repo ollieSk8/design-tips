@@ -232,7 +232,7 @@ pc端按照实际设计的尺寸导出，移动端页面宽度按照750导出。
 
 有些内容并不是页面打开就加在完成的，而是有一个 loading 的过程。
 
-![./media/listloading](./media/listloading)
+![./media/listloading.png](./media/listloading.png)
 
 例如上面这个列表，在初始化加载页面是没有数据的，加载过程中应该出现loading文字提示。
 
