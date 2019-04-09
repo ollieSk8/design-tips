@@ -54,9 +54,12 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 <a name="hash_size" href="#hash_top">Top</a>
 
 
-## 页面尺寸
+## PC页面尺寸
 
 网页尺寸需要考虑浏览者的屏幕分辨率
+
+主流的pc页面尺寸见下图，其中1366*768、1920*1080 两种尺寸占比最多
+![1554777427684.jpg](./media/1554777427684.jpg)
 
 <a name="hash_size_min-width" href="#hash_top">Top</a>
 
@@ -80,13 +83,31 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 ### 手机页面尺寸
 
-设计只需要按照 640 或 750 设计即可，前端会利用[rem](https://github.com/jieyou/rem_layout) 让设计稿占满屏幕
+设计只需要按照750 设计即可，前端会利用[rem](https://github.com/jieyou/rem_layout) 让设计稿占满屏幕
 
 <a name="hash_responsive" href="#hash_top">Top</a>
 
 ### 响应式设计
 
-响应式设计规范可参考 [https://github.com/ColdXu/grid-design](https://github.com/ColdXu/grid-design)
+针对响应式布局方案，设计师推荐使用栅格系统设计页面。
+
+这里需要理解一个概念，通常为了布局方便我们将内容区域划分为12或者24格，并在栅格间增加通用间距来处理绝大多数情况下的垂直排列问题，12或24的好处是能够被2、3、4整除，更方便来处理2：1，1：2：1等常见间距。
+
+![cloum.jpg](./media/cloum.jpg)
+
+计算方式（我这里常见的是处理企业级的设计页面）
+
+我们把宽度"W"的页面分割成n个网格单元"a" ,每个单元与单元之间间隙设为"i",此时我们把"a+i"定义为A.他们之间的关系如下：
+
+W=(a*n)+(n-1)*i
+
+由于a+i=A
+
+可得(A*n)-i=W
+
+我们定义W为1080px,A为50px,i为20px,所以n=24
+
+当我们设置设计栅格时候，可以将总宽度设为1180，页面分为24栏，每一栏宽度为30px,间距20px
 
 <a name="hash_retina" href="#hash_top">Top</a>
 
@@ -107,7 +128,13 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 <a name="hash_font-size" href="#hash_top">Top</a>
 
 ### 大小
+
+关于网页字体大小等问题，也可以参考上面比较经典的设计规范约定。常见的内容段落文字大小约定为 14px。
+我这边在做的规范，关于排版的约定如下：
+
 内容性质字体大小不得小于 12px ，因为某些浏览器默认文字大小只能是 12px。网页中显示小于 12px 的文字会变形。
+
+![panban.jpg](./media/panban.jpg)
 
 <a name="hash_font-special" href="#hash_top">Top</a>
 
